@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+class time {
+	public:
+	int hour;
+	int min;
+	int sec;
+};
+
+int sec(time obj);
+int main()
+{
+	time obj;
+	cout<<"hours? "<<endl;
+	cin>>obj.hour;
+	cout<<"minutes? "<<endl;
+	cin>>obj.min;
+	cout<<"seconds? "<<endl;
+	cin>>obj.sec;
+	cout<<"the time u entered is "<<obj.hour<<":"<<obj.min<<":"<<obj.sec<<endl;
+	sec( obj);
+}
+int sec(time obj) {
+	int h,m,m2;
+	h=obj.hour*60;
+	if(h=0)
+	{
+		m2=(obj.min*60)+obj.sec;
+		cout<<"Time in Total seconds: "<<m2<<endl;
+	}
+	else {
+		m=(h*60)+(obj.min*60)+obj.sec;
+	
+	cout<<"Time in Total seconds : "<<m<<endl;
+    }
+}
